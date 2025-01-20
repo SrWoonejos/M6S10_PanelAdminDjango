@@ -6,6 +6,7 @@ from django.db import models
 class Book(models.Model):
     titulo = models.CharField(max_length=200)
     autor = models.CharField(max_length=100)
+    valoracion = models.IntegerField(default=0)  # Nuevo campo de valoración
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     fecha_modificacion = models.DateTimeField(auto_now=True)
 
